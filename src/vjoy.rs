@@ -430,7 +430,7 @@ impl VJoy {
                 Ok(())
             } else {
                 Err(Error::Ffi(FFIError::DeviceCouldNotBeAcquired(
-                    device_id, result,
+                    device_id, result as u32
                 )))
             }
         }
